@@ -4,7 +4,7 @@
 <section id="categorias">
 
     <div class="imagens categoria">
-
+    
         <figure>
             <a href="lista_produtos.jsp">
                 <button class="bolsas_but">
@@ -15,7 +15,7 @@
         </figure>
 
         <figure>
-            <a href="https://www.youtube.com/watch?v=DiK7ud_o8EU">
+            <a href="#">
                 <button class="carteiras_but">
             <img src="assets/img/carteiras.png" alt="Carteiras">
             <figcaption>CARTEIRAS</figcaption>
@@ -24,7 +24,7 @@
         </figure>
 
         <figure>
-            <a href="https://www.youtube.com/watch?v=DiK7ud_o8EU">
+            <a href="#">
                 <button class="necessaires_but">
             <img src="assets/img/necessaires.png" alt="Necessaires">
             <figcaption>NECESSAIRES</figcaption>
@@ -33,7 +33,7 @@
         </figure>
 
         <figure>
-            <a href="https://www.youtube.com/watch?v=DiK7ud_o8EU">
+            <a href="#">
                 <button class="guarda_but">
             <img src="assets/img/guarda-chuva.png" alt="Guarda-Chuvas">
             <figcaption>GUARDA-CHUVAS</figcaption>

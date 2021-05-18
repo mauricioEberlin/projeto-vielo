@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-String nomeUsuario = request.getParameter("nomeUsuario");
-Boolean isAutenticado = Boolean.parseBoolean(request.getParameter("isAutenticado"));
+String nomeUsuario = (String)session.getAttribute("nomeUsuario");
+Boolean isAutenticado = (Boolean)session.getAttribute("isAutenticado");
 %>
 
 <!DOCTYPE html>
@@ -23,18 +23,14 @@ Boolean isAutenticado = Boolean.parseBoolean(request.getParameter("isAutenticado
     </header>
     <nav>
         <div class="cabecalho">
-            <ul class="esquerda">
-                
-                <%
-                
+            <ul class="esquerda">             
+                <%               
                 if(nomeUsuario == "" || nomeUsuario == null){
                     out.print("<li><a href='#'>ENTRE</a></li><li><a href='#'>CADASTRE-SE</a></li>");
                 }else{
                      out.print("<li><a href='#'>Bem vindo(a), "+ nomeUsuario +"!</a></li>");
-                }
-                
-                %>
-                
+                }               
+                %>               
             </ul>
 
             <ul class="meio">

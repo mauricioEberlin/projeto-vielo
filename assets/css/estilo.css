@@ -57,6 +57,10 @@ h1 {
     font-weight: normal;
 }
 
+h2 {
+    font-size: 36px;
+}
+
 ul{
     list-style-type: none;
 }
@@ -108,7 +112,7 @@ ul{
 .meio li ul {
     position: absolute;
     display: none;
-    top: 27px;
+    top: 22px;
     left: -15px;
 }
 
@@ -419,4 +423,52 @@ ul{
     float: right;
     width: 40px;
     padding: 15px 15px 15px 0px;
+}
+
+.produto-detalhado{
+    margin: 50px 15%;
+    background-color: #F1EEEE;
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+}
+
+.bloco-produto{
+    display: flex;
+    padding: 25px 50px;
+}
+
+.imagem-produto img{
+    width: 80%;
+    border-radius: 2%;
+}
+
+.detalhes-produto{
+    flex: auto;
+    padding: 20px;
+}
+
+.detalhes-titulo{
+    margin-bottom: 30px;
+    border-bottom: 2px solid #DDDDDD;
+}
+
+.detalhes-preco{
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.detalhes-descricao button{
+    background-color: #3483fa;
+    color: #F1EEEE;
+    font-size: 18px;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #1170ff;
+    border-radius: 5px;
+}
+
+.detalhes-descricao button:hover{
+    background-color: #1170ff;
+    font-size: 19px;
+    transition: 0.3s;
 }
