@@ -13,8 +13,9 @@
             ResultSet compras = stm.executeQuery(sql);
 
             if(compras.next()){
+                compras.beforeFirst();
                 while(compras.next()){
-                    idsCompra += compras.getString("id_produto") + ",";
+                    idsCompra += compras.getString("id_produto") + ",";        
                 }
                 idsCompra = idsCompra.substring(0, idsCompra.length() - 1);
                 sql = "SELECT * FROM produto WHERE id IN ("+idsCompra+")";
@@ -23,12 +24,12 @@
                 while(produtos.next()){
                     out.print("<div class='compras-bloco'>");
                     out.print("<div class='compras-imagem'>");
-                    out.print("<img src='assets/img/bolsa 2.png'/>");
+                    out.print("<img src='assets/img/"+produtos.getString("imagem")+"'/>");
                     out.print("</div>");
                     out.print("<div class='compras-desc'>");
                     out.print("<span><p>"+produtos.getString("nome_produto")+"</p></span>");
                     out.print("<p>R$ "+produtos.getString("preco").replace(".", ",")+"</p>");
-                    out.print("<p><a href='produto.jsp?id=1'>Ver página do produto</a></p>");
+                    out.print("<p><a href='produto.jsp?id="+produtos.getString("id")+"'>Ver página do produto</a></p>");
                     out.print("</div>");
                     out.print("</div>");      
                 }
