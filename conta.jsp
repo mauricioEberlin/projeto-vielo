@@ -57,7 +57,7 @@
                     <button id="botaoAlterar" type="submit" disabled>Alterar dados</button>
                 </div>
             </form>
-
+            <a href="utils/usuario/deletarUsuario.jsp"><button class="btn-deletar">Deletar conta</button></a>
         </div>
     </div>
 

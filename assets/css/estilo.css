@@ -486,6 +486,12 @@ ul{
     transition: 0.3s;
 }
 
+.main-dados{
+    margin: auto;
+    text-align: center;
+    background-color: #F1EEEE;
+}
+
 .compras{
     margin: 20px 50px;
 }
@@ -525,10 +531,7 @@ ul{
 }
 
 .dados-campos{
-    margin: auto;
-    text-align: center;
     padding: 10px 100px;
-    background-color: #F1EEEE;
 }
 
 .dados-campos input{
@@ -547,4 +550,22 @@ ul{
     background-color: #F1EEEE;
     border-color: #DDDDDD;
     color: #707070;
+}
+
+.btn-deletar{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f44336;
+    color: #F1EEEE;
+    font-size: 14px;
+    width: 100px;
+    height: 35px;
+    border: 2px solid #fc2718;
+    border-radius: 5px;
+}
+
+.btn-deletar:hover{
+    background-color: #fc2718;
+    font-size: 15px;
+    transition: 0.3s;
 }
