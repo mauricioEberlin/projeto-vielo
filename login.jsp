@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%
+String campoemail = "";
+if (request.getParameter("campoemail") != null){
+    campoemail = request.getParameter("campoemail");
+}
+%>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,9 +24,10 @@
     <div class="login-page">
         <div class="form">
             <form class="login-form" name="login" method="post" action="utils/usuario/autenticarUsuario.jsp">
-                <input type="text" placeholder="e-mail" name="campoemail"/>
+                <input type="text" placeholder="e-mail" name="campoemail" value="<%out.print(campoemail);%>"/>
                 <input type="password" placeholder="senha" name="camposenha"/>
                 <button type="submit"> login </button>
+                <%if(Boolean.parseBoolean(request.getParameter("erro"))){out.print("<p class='message'>Usuario ou/e senha inválido(s)</p>");}%>
                 <p class="message">Não registrado? <a href="register.jsp">Cadastre-se</a></p>
             </form>
         </div>

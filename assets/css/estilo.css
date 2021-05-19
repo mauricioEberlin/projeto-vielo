@@ -65,6 +65,10 @@ ul{
     list-style-type: none;
 }
 
+.hidden{
+    display: none;
+}
+
 .icone-principal {
     text-align: center;
     margin: auto;
@@ -164,6 +168,15 @@ ul{
     padding-right: 5px;
     flex: 1;
     margin: 5px;
+    
+}
+
+.direita button, .direita input{
+    height: 19px;
+    margin-left: 10px;
+    padding: 2px;
+    border: 1px solid white;
+    border-radius: 2px;
 }
 
 .imagens {
@@ -457,7 +470,7 @@ ul{
     margin-bottom: 30px;
 }
 
-.detalhes-descricao button{
+.detalhes-descricao button, .dados-campos button{
     background-color: #3483fa;
     color: #F1EEEE;
     font-size: 18px;
@@ -471,4 +484,67 @@ ul{
     background-color: #1170ff;
     font-size: 19px;
     transition: 0.3s;
+}
+
+.compras{
+    margin: 20px 50px;
+}
+
+.main-conta h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.compras-bloco{
+    display: flex;
+    width: 50%;
+    height: 125px;
+    min-width: 350px;
+    max-width: 750px;
+    border: 2px solid #F1EEEE;
+    border-radius: 5px;
+    padding: 20px 20px;
+    margin: auto;
+}
+
+.compras-imagem img{
+    height: 125px;
+    border-radius: 10px;
+}
+
+.compras-desc{
+    flex: auto;
+    margin-left: 15%;
+}
+
+.compras-desc span p{
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.dados-campos{
+    margin: auto;
+    text-align: center;
+    padding: 10px 100px;
+    background-color: #F1EEEE;
+}
+
+.dados-campos input{
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: white;
+    padding: 0px 10px;
+}
+
+.dados-campos button{
+    margin-top: 10px;
+}
+
+.dados-campos button:disabled, .detalhes-descricao button:disabled{
+    background-color: #F1EEEE;
+    border-color: #DDDDDD;
+    color: #707070;
 }

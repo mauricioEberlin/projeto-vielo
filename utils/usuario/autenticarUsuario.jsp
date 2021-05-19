@@ -13,10 +13,12 @@
 
     if(resultSet.next()){
 		pagina = "../../index.jsp";
+		session.setAttribute("idUsuario", resultSet.getString("id"));
 		session.setAttribute("nomeUsuario", resultSet.getString("nome"));
+		session.setAttribute("emailUsuario", resultSet.getString("email"));
 		session.setAttribute("isAutenticado", true);
     }else{
-		pagina = "../../login.jsp";
+		pagina = "../../login.jsp?erro=true&campoemail="+campoemail;
     }
 
 	conexao.close();

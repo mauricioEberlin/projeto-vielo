@@ -6,18 +6,20 @@
         String id = request.getParameter("id");
         String nome_produto = "";
         String preco = "";
-        String qntd_estoque = "";
+        String imagem = "boneca.png";
+        int qntd_estoque = 0;
         Boolean isExistente = false;
-
+        
         if (id != "" && id != null){
             String sql = "SELECT * FROM produto WHERE id = " + id;
-            ResultSet resultSet = stm.executeQuery(sql);       
+            ResultSet resultSet = stm.executeQuery(sql);
             
             if(resultSet.next()){
                 isExistente = true;
                 nome_produto = resultSet.getString("nome_produto");
                 preco = resultSet.getString("preco");
-                qntd_estoque = resultSet.getString("qntd_estoque");
+                imagem = resultSet.getString("imagem");
+                qntd_estoque = Integer.parseInt(resultSet.getString("qntd_estoque"));
             }
         }
         conexao.close();
@@ -32,7 +34,7 @@
 <div class="produto-detalhado">
     <div class="bloco-produto">
         <div class="imagem-produto">
-            <img src="assets/img/bolsa 2.png"/>
+            <img src="assets/img/<%out.print(imagem);%>"/>
         </div>
         <div class="detalhes-produto">
             <div class="detalhes-titulo">
@@ -41,7 +43,10 @@
             </div>
             <div class="detalhes-descricao">
                 <p class="detalhes-preco">R$ <%out.print(preco.replace(".", ","));%></p>
-                <button class="detalhes-comprar">Comprar agora</button>
+                <a href="utils/produto/finalizar_compra.jsp?id_produto=<%out.print(id);%>">
+                <button class="detalhes-comprar" <%if(!isAutenticado || qntd_estoque <= 0){out.print("disabled");}%>>Comprar agora</button></a> 
+                <%if(!isAutenticado){out.print("<p>Precisa estar logado</p>");}%>
+                <%if(qntd_estoque <= 0){out.print("<p>Produto esgotado</p>");}%>
             </div>
         </div>
     </div>

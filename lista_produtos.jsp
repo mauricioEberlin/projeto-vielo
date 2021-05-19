@@ -5,22 +5,34 @@
 <div class="sidebar">
 
     <ul>
-        <li><a href="#">Bolsas (3)</a></li>
-        <li><a href="#">Carteiras (2)</a></li>
+        <li><a href="lista_produtos.jsp?tipo=bolsas">Bolsas</a></li>
+        <li><a href="lista_produtos.jsp?tipo=carteiras">Carteiras</a></li>
+        <li><a href="lista_produtos.jsp?tipo=necessaires">Necessaires</a></li>
+        <li><a href="lista_produtos.jsp?tipo=guarda-chuvas">Guarda-chuvas</a></li>
     </ul>
 
 </div>
 
 <div class="produtos">  
     <%
+
         String sql = "SELECT * FROM produto";
+        String tipo = request.getParameter("tipo");
+        String busca = request.getParameter("busca");
+        if(tipo != null && tipo != ""){
+            sql = "SELECT * FROM produto WHERE tipo = '"+tipo+"'";
+        }
+        if(busca != null && busca != ""){
+            sql = "SELECT * FROM produto WHERE nome_produto LIKE '%"+busca+"'";
+        }
+
         ResultSet resultSet = stm.executeQuery(sql);
 
         while(resultSet.next()){
             out.print("<div class='card-produto'>");
             out.print("<a href='produto.jsp?id="+resultSet.getString("id")+"'>");
             out.print("<div>");
-            out.print("<img class='img-card' src='assets/img/bolsa 2.png' alt="+resultSet.getString("nome_produto")+">");
+            out.print("<img class='img-card' src='assets/img/"+resultSet.getString("imagem")+"' alt="+resultSet.getString("nome_produto")+">");
             out.print("</div>");
             out.print("<div class='desc'>");
             out.print("<span class='preco'>R$ "+resultSet.getString("preco").replace(".", ",")+"</span>");

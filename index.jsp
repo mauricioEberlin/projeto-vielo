@@ -6,7 +6,7 @@
     <div class="imagens categoria">
     
         <figure>
-            <a href="lista_produtos.jsp">
+            <a href="lista_produtos.jsp?tipo=bolsas">
                 <button class="bolsas_but">
             <img src="assets/img/bolsas.png" alt="Bolsas">
             <figcaption>BOLSAS</figcaption>
@@ -15,7 +15,7 @@
         </figure>
 
         <figure>
-            <a href="#">
+            <a href="lista_produtos.jsp?tipo=carteiras">
                 <button class="carteiras_but">
             <img src="assets/img/carteiras.png" alt="Carteiras">
             <figcaption>CARTEIRAS</figcaption>
@@ -24,7 +24,7 @@
         </figure>
 
         <figure>
-            <a href="#">
+            <a href="lista_produtos.jsp?tipo=necessaires">
                 <button class="necessaires_but">
             <img src="assets/img/necessaires.png" alt="Necessaires">
             <figcaption>NECESSAIRES</figcaption>
@@ -33,7 +33,7 @@
         </figure>
 
         <figure>
-            <a href="#">
+            <a href="lista_produtos.jsp?tipo=guarda-chuvas">
                 <button class="guarda_but">
             <img src="assets/img/guarda-chuva.png" alt="Guarda-Chuvas">
             <figcaption>GUARDA-CHUVAS</figcaption>

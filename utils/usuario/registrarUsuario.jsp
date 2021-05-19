@@ -14,9 +14,9 @@
 	ResultSet resultSet = stm.executeQuery(sql);
 
 	if (camponome == "" || campoemail  == "" || camposenha == ""){
-		//Mandar aviso que há campo vazio
+		pagina = "../../register.jsp?vazio=true&camponome="+camponome+"&campoemail="+campoemail;
 	}else if (resultSet.next()){
-		//Mandar aviso que já existe um usuário com este email
+		pagina = "../../register.jsp?existente=true";
 	}else{
 		pagina = "../../login.jsp";
 		sql = "INSERT INTO usuario (nome, email, senha) VALUES('"+camponome+"','"+campoemail+"','"+camposenha+"')";
