@@ -54,17 +54,17 @@
     <div class="imagens produto">
 
         <figure>
-            <img src="assets/img/bolsa 2.png" alt="Bolsa Grande">
+            <a href="produto.jsp?id=1"><img src="assets/img/bolsa 2.png" alt="Bolsa Grande"></a>
             <figcaption>Bolsa Grande <span>1X R$120,00</span></figcaption>
         </figure>
 
         <figure>
-            <img src="assets/img/bolsa 1.png" alt="Bolsa Tiracolo">
+            <a href="produto.jsp?id=3"><img src="assets/img/bolsa 1.png" alt="Bolsa Tiracolo"></a>
             <figcaption>Bolsa Tiracolo <span>1X R$80,00</span></figcaption>
         </figure>
 
         <figure>
-            <img src="assets/img/carteiras.png" alt="Pochete">
+            <a href="produto.jsp?id=7"><img src="assets/img/carteiras.png" alt="Pochete"></a>
             <figcaption>Pochete<span>1X R$80,00</span></figcaption>
         </figure>
 

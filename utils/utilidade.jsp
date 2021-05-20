@@ -31,6 +31,7 @@
 		stm.executeUpdate("INSERT INTO produto(nome_produto, preco, qntd_estoque, imagem, tipo) VALUES ('Bolsa', 44.90, 50,'bolsa.png','bolsas');");
 		stm.executeUpdate("INSERT INTO produto(nome_produto, preco, qntd_estoque, imagem, tipo) VALUES ('Bolsa brilho', 50.00, 32,'bolsa brilho.png','bolsas');");
 		stm.executeUpdate("INSERT INTO produto(nome_produto, preco, qntd_estoque, imagem, tipo) VALUES ('Bolsa bau', 40.00, 36,'bolsa bau.png','bolsas');");
+		stm.executeUpdate("INSERT INTO produto(nome_produto, preco, qntd_estoque, imagem, tipo) VALUES ('Pochete', 29.90, 43,'carteiras.png','carteiras');");
 		stm.executeUpdate("INSERT INTO produto(nome_produto, preco, qntd_estoque, imagem, tipo) VALUES ('Carteira', 30.00, 58,'carteiras (3).png','carteiras');");
 		stm.executeUpdate("INSERT INTO produto(nome_produto, preco, qntd_estoque, imagem, tipo) VALUES ('Carteira', 40.00, 62,'carteiras (4).png','carteiras');");
 		stm.executeUpdate("INSERT INTO produto(nome_produto, preco, qntd_estoque, imagem, tipo) VALUES ('Guarda-chuva', 80.00, 30,'guarda-chuva.png','guarda-chuvas');");
