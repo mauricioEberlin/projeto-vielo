@@ -52,7 +52,7 @@ if(isAutenticado == null){
 
             <ul class="direita">
                 <form name="busca" method="get" action="lista_produtos.jsp">
-                    <li><input type="text" name="busca" placeholder="campo de busca"><button type="submit">Buscar</button></li>
+                    <li><input type="text" name="busca"><button type="submit">Buscar</button></li>
                 </form>
             </ul>
         </div>

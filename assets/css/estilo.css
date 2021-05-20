@@ -175,7 +175,7 @@ ul{
     height: 19px;
     margin-left: 10px;
     padding: 2px;
-    border: 1px solid white;
+    border: 1px solid #F1EEEE;
     border-radius: 2px;
 }
 
@@ -383,14 +383,20 @@ ul{
     font-size: 12px;
 }
 
+.lista-produtos{
+    position: relative;
+    overflow: hidden;
+}
+
 .sidebar{
     font-weight: bold;
     background-color: #F1EEEE;
     float: left;
     width: 15%;
+    height: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-right: 5%;
+    position: absolute;
 }
 
 .sidebar li{
@@ -403,6 +409,7 @@ ul{
     display: flex;
     flex-wrap: wrap;
     margin-right: 5%;
+    margin-left: 20%;
 }
 
 .card-produto{

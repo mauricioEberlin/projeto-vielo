@@ -16,8 +16,8 @@
         <div class="footer-direita">
             <span>Encontre-nos em</span><br/>
             <div class="imagens-footer">
-                <img src="assets/img/icons/icon-instagram.png" alt="Instagram" height="30">
-                <img src="assets/img/icons/icon-whatsapp.png" alt="Whatsapp" height="30">
+                <a href="https://www.instagram.com/vielobolsas/"><img src="assets/img/icons/icon-instagram.png" alt="Instagram" height="30"></a>
+                <a href="https://wa.me/message/OVOX4UWBSDRKP1"><img src="assets/img/icons/icon-whatsapp.png" alt="Whatsapp" height="30"></a>
             </div>
         </div>
 

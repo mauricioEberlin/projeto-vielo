@@ -2,6 +2,7 @@
 <%@include file="layout/cabecalho.jsp"%>
 <%@include file="utils/utilidade.jsp"%>
 
+<div class="lista-produtos">
 <div class="sidebar">
 
     <ul>
@@ -23,7 +24,7 @@
             sql = "SELECT * FROM produto WHERE tipo = '"+tipo+"'";
         }
         if(busca != null && busca != ""){
-            sql = "SELECT * FROM produto WHERE nome_produto LIKE '%"+busca+"'";
+            sql = "SELECT * FROM produto WHERE nome_produto LIKE '%"+busca+"%'";
         }
 
         ResultSet resultSet = stm.executeQuery(sql);
@@ -49,6 +50,7 @@
         conexao.close();
         stm.close();
     %>
+</div>
 </div>
 
 <%@include file="layout/rodape.jsp"%>
